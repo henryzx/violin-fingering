@@ -1,4 +1,4 @@
-package org.zhengxiao.violinfingering.util;
+package org.z.violinfingering.util;
 
 import java.io.File;
 import java.io.FileInputStream;

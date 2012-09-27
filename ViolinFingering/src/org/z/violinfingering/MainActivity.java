@@ -1,4 +1,4 @@
-package org.zhengxiao.violinfingering;
+package org.z.violinfingering;
 
 import java.io.File;
 import java.io.FileDescriptor;
@@ -8,10 +8,10 @@ import java.lang.ref.WeakReference;
 import java.util.Locale;
 import java.util.Map;
 
-import org.zhengxiao.violinfingering.util.FileManager;
-import org.zhengxiao.violinfingering.util.MidiManipulator;
-import org.zhengxiao.violinfingering.util.MidiMapper;
-import org.zhengxiao.violinfingering.util.ThemeUtil;
+import org.z.violinfingering.util.FileManager;
+import org.z.violinfingering.util.MidiManipulator;
+import org.z.violinfingering.util.MidiMapper;
+import org.z.violinfingering.util.ThemeUtil;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -261,12 +261,6 @@ public class MainActivity extends Activity implements MidiEventListener,
 		super.onDestroy();
 	}
 	
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_main, menu);
-		return true;
-	}
-
 	public void onStart(boolean fromBeginning) {
 		Log.d("processor", "onStart,beginning?" + fromBeginning);
 		if (mMediaPlayer != null) {

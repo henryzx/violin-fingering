@@ -1,9 +1,11 @@
-package org.zhengxiao.violinfingering;
+package org.z.violinfingering;
 
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+import org.z.violinfingering.R;
 
 import android.app.Activity;
 import android.view.View;

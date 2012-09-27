@@ -1,6 +1,6 @@
-package org.zhengxiao.violinfingering.util;
+package org.z.violinfingering.util;
 
-import org.zhengxiao.violinfingering.R;
+import org.z.violinfingering.R;
 
 import android.app.Activity;
 import android.content.Intent;

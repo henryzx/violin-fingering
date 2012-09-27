@@ -1,6 +1,6 @@
-package org.zhengxiao.violinfingering.util;
+package org.z.violinfingering.util;
 
-import org.zhengxiao.violinfingering.Configs;
+import org.z.violinfingering.Configs;
 
 import com.leff.midi.MidiFile;
 

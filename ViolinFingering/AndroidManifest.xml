@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.zhengxiao.violinfingering"
+    package="org.z.violinfingering"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,22 +14,22 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="org.zhengxiao.violinfingering.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.zhengxiao.violinfingering.FileListActivity" />
+                android:value=".FileListActivity" />
         </activity>
         <activity
-            android:name="org.zhengxiao.violinfingering.FileListActivity"
+            android:name=".FileListActivity"
             android:screenOrientation="portrait"
             android:label="@string/title_activity_file_list">
         </activity>
         <activity
             android:name=".SplashScreen"
             android:screenOrientation="portrait"
-            android:label="@string/title_activity_splash_screen" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

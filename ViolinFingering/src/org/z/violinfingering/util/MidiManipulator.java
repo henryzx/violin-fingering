@@ -1,4 +1,4 @@
-package org.zhengxiao.violinfingering.util;
+package org.z.violinfingering.util;
 
 import java.util.ArrayList;
 import java.util.Collections;

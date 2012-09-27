@@ -1,4 +1,4 @@
-package org.zhengxiao.violinfingering;
+package org.z.violinfingering;
 
 /**
  * @author Zheng
