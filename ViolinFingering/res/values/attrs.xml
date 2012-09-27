@@ -5,5 +5,6 @@
     <attr name="fingerStyleRef" format="reference" />
     <attr name="textMainStyleRef" format="reference" />
     <attr name="backGroundStyleRef" format="reference" />
+    <attr name="fingerPadBgRef" format="reference"/>
 	
 </resources>

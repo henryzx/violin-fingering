@@ -4,6 +4,7 @@
         <item name="fingerStyleRef">@style/finger</item>
         <item name="textMainStyleRef">@style/TextMainStyle</item>
         <item name="backGroundStyleRef">@style/activity_main</item>
+        <item name="fingerPadBgRef">@drawable/fingerpad_w</item>
     </style>
     
     
@@ -46,6 +47,7 @@
         <item name="fingerStyleRef">@style/finger_night</item>
         <item name="textMainStyleRef">@style/TextMainStyle_night</item>
         <item name="backGroundStyleRef">@style/activity_main_night</item>
+        <item name="fingerPadBgRef">@drawable/fingerpad_b</item>
     </style>
     
 </resources>

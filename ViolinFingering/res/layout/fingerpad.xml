@@ -9,7 +9,7 @@
         android:id="@+id/imageView_fingerpad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/fingerpad" />
+        android:src="?fingerPadBgRef" />
 
     <TextView
         android:id="@+id/A0"
