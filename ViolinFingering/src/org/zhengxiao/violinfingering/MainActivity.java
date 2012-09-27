@@ -168,35 +168,12 @@ public class MainActivity extends Activity implements MidiEventListener,
 	private void loadMidi(String midiFileName) throws Exception {
 		Log.d("init", "loadMidi");
 		MidiFile midi = null;
-		try {
 			if (isAsset) {
 				InputStream is = getAssets().open(midiFileName);
 				midi = new MidiFile(is);
 			} else {
 				midi = new MidiFile(new File(mMidiFileName));
 			}
-
-			// File cache = new File(getCacheDir() + CACHEPATH_PLAYBACK_MID);
-			// if (!cache.exists())
-			// cache.createNewFile();
-			// else {
-			// cache.delete();
-			// cache.createNewFile();
-			// }
-			// if(isAsset)
-			// midi.writeToFile(cache);
-			// else
-			// FileManager.copyFile(new File(mMidiFileName),cache);
-			// Log.d("cache", "can write?" + cache.canWrite());
-			// midi.writeToFile(cache);
-			// FileInputStream i = new FileInputStream(cache);
-			//
-			// Log.d("cache", "fileIsAt?" + cache.getAbsolutePath());
-			// Log.d("cache", "file size?" + i.available());
-			// i.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 
 		mProcessor = new MidiProcessor(midi);
 		// EventPrinter ep = new EventPrinter("Individual Listener");
@@ -211,7 +188,10 @@ public class MainActivity extends Activity implements MidiEventListener,
 			cache.delete();
 		cache.createNewFile();
 //		midi.writeToFile(cache);
-		FileManager.copyFile(new File(mMidiFileName), cache);
+		if(isAsset)
+			midi.writeToFile(cache);
+		else
+			FileManager.copyFile(new File(mMidiFileName), cache);
 //		File nf = new File(Environment.getExternalStorageDirectory()+"/playback.mid");
 //		if(nf.exists())
 //			nf.delete();
@@ -263,6 +243,12 @@ public class MainActivity extends Activity implements MidiEventListener,
 		super.onStop();
 	}
 
+	@Override
+	protected void onDestroy() {
+		mMediaPlayer.release();
+		super.onDestroy();
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
@@ -366,5 +352,6 @@ public class MainActivity extends Activity implements MidiEventListener,
 		}
 		return false;
 	}
+
 
 }
