@@ -5,7 +5,6 @@ import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
-import java.util.Locale;
 import java.util.Map;
 
 import org.zhengxiao.violinfingering.util.FileManager;
@@ -15,15 +14,12 @@ import org.zhengxiao.violinfingering.util.ThemeUtil;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -108,7 +104,7 @@ public class MainActivity extends Activity implements MidiEventListener,
 		mMidiFileName = option.getPath();
 		File temp = new File(mMidiFileName);
 		friendlyFileName = temp.getName();
-		setLocale2("nt");
+//		setLocale2("nt");
 		setTheme(ThemeUtil.currentTheme);
 		boolean isChecked = ThemeUtil.isNightMode;
 		
@@ -154,6 +150,16 @@ public class MainActivity extends Activity implements MidiEventListener,
 				}
 			}
 		});
+		
+		Button backButton = (Button) findViewById(R.id.button_back);
+				backButton.setOnClickListener(new View.OnClickListener() {
+					
+					@Override
+					public void onClick(View v) {
+						MainActivity.this.finish();
+						
+					}
+				});
 		
 		ToggleButton bu = (ToggleButton) findViewById(R.id.toggleButton_night);
 		bu.setChecked(isChecked);
@@ -317,24 +323,25 @@ public class MainActivity extends Activity implements MidiEventListener,
 		});
 	}
 
-	public void setLocale(String language_code) {
-		Resources res = this.getResources();
-		// Change locale settings in the app.
-		DisplayMetrics dm = res.getDisplayMetrics();
-		android.content.res.Configuration conf = res.getConfiguration();
-		conf.locale = new Locale(language_code.toLowerCase());
-		res.updateConfiguration(conf, dm);
-	}
-
-	public void setLocale2(String languageToLoad) {
-		// String languageToLoad = "fa"; // your language
-		Locale locale = new Locale(languageToLoad);
-		Locale.setDefault(locale);
-		Configuration config = new Configuration();
-		config.locale = locale;
-		getBaseContext().getResources().updateConfiguration(config,
-				getBaseContext().getResources().getDisplayMetrics());
-	}
+	
+//	public void setLocale(String language_code) {
+//		Resources res = this.getResources();
+//		// Change locale settings in the app.
+//		DisplayMetrics dm = res.getDisplayMetrics();
+//		android.content.res.Configuration conf = res.getConfiguration();
+//		conf.locale = new Locale(language_code.toLowerCase());
+//		res.updateConfiguration(conf, dm);
+//	}
+//
+//	public void setLocale2(String languageToLoad) {
+//		// String languageToLoad = "fa"; // your language
+//		Locale locale = new Locale(languageToLoad);
+//		Locale.setDefault(locale);
+//		Configuration config = new Configuration();
+//		config.locale = locale;
+//		getBaseContext().getResources().updateConfiguration(config,
+//				getBaseContext().getResources().getDisplayMetrics());
+//	}
 
 	public void onPrepared(MediaPlayer player) {
 		if (mProgressDialog != null)

@@ -140,13 +140,13 @@ public class MidiManipulator {
 			if(curTick == 481){
 				Log.d("tick", String.valueOf(curTick));
 			}
-			int curValue = cur.getNoteValue();
+			int curValue = MidiMapper.Value2Range(cur.getNoteValue());
 
 			// 如果 cur 在弦上，则需要判断是否用空弦，否则直接11对应、返回
 			if (MidiMapper.isAtViolinLine(curValue)) {
 				final MidiEvent next = queue.peek();
 				if (next != null) {
-					int nextValue = ((NoteOn) next).getNoteValue();
+					int nextValue = MidiMapper.Value2Range(((NoteOn) next).getNoteValue());
 					int curLine = MidiMapper.atViolinLine(curValue);
 					int nextLine = MidiMapper.atViolinLine(nextValue);
 					if (nextLine > curLine)

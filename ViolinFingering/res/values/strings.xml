@@ -12,35 +12,35 @@
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="version">1.0</string>
 
-    <string name="g0s">G#</string>
-    <string name="a0">A</string>
-    <string name="a0s">A#</string>
-    <string name="b0">B</string>
-    <string name="c1">C</string>
-    <string name="c1s">C#</string>
-    <string name="d1">D</string>
+    <string name="g0s">1</string>
+    <string name="a0">1</string>
+    <string name="a0s">2</string>
+    <string name="b0">2</string>
+    <string name="c1">3</string>
+    <string name="c1s">3</string>
+    <string name="d1">4</string>
     
-    <string name="d1s">D#</string>
-    <string name="e1">E</string>
-    <string name="f1">F</string>
-    <string name="f1s">F#</string>
-    <string name="g1">G</string>
-    <string name="g1s">G#</string>
-    <string name="a1">A</string>
+    <string name="d1s">1</string>
+    <string name="e1">1</string>
+    <string name="f1">2</string>
+    <string name="f1s">2</string>
+    <string name="g1">3</string>
+    <string name="g1s">3</string>
+    <string name="a1">4</string>
     
-    <string name="a1s">A#</string>
-    <string name="b1">B</string>
-    <string name="c2">C</string>
-    <string name="c2s">C#</string>
-    <string name="d2">D</string>
-    <string name="d2s">D#</string>
-    <string name="e2">E</string>
+    <string name="a1s">1</string>
+    <string name="b1">1</string>
+    <string name="c2">2</string>
+    <string name="c2s">2</string>
+    <string name="d2">3</string>
+    <string name="d2s">3</string>
+    <string name="e2">4</string>
     
-    <string name="f2">F</string>
-    <string name="f2s">F#</string>
-    <string name="g2">G</string>
-    <string name="g2s">G#</string>
-    <string name="a2">A</string>
-    <string name="a2s">A#</string>
-    <string name="b2">B</string>
+    <string name="f2">1</string>
+    <string name="f2s">1</string>
+    <string name="g2">2</string>
+    <string name="g2s">2</string>
+    <string name="a2">3</string>
+    <string name="a2s">3</string>
+    <string name="b2">4</string>
 </resources>

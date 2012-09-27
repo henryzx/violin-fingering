@@ -105,7 +105,7 @@ public class FileListActivity extends ListActivity {
 			startActivity(main);
 			return;
 		}
-		Toast.makeText(this, "File Clicked: " + o, Toast.LENGTH_SHORT).show();
+//		Toast.makeText(this, "File Clicked: " + o, Toast.LENGTH_SHORT).show();
 		Intent main = new Intent(this, MainActivity.class);
 		main.putExtra(EXTRA_FILE, o);
 		startActivity(main);

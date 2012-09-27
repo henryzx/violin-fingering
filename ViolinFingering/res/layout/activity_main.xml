@@ -40,6 +40,13 @@
             android:textOff="白天主题"
             android:textOn="夜间主题" />
 
+        <Button
+            android:id="@+id/button_back"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回" />
+
     </LinearLayout>
 
     <TextView

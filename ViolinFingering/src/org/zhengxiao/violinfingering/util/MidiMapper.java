@@ -58,8 +58,9 @@ public class MidiMapper {
 	}
 
 	public static int Value2Range(int midiNoteValue) {
-		if (midiNoteValue < G3)
-			return G3;
+		while(midiNoteValue < G3){
+			midiNoteValue += 12;
+		}
 		while (midiNoteValue > E5 + 7) {
 			midiNoteValue -= 12;
 		}
