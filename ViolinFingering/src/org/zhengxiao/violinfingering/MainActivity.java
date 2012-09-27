@@ -5,6 +5,7 @@ import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
+import java.util.Locale;
 import java.util.Map;
 
 import org.zhengxiao.violinfingering.util.FileManager;
@@ -14,6 +15,7 @@ import org.zhengxiao.violinfingering.util.ThemeUtil;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -104,7 +106,7 @@ public class MainActivity extends Activity implements MidiEventListener,
 		mMidiFileName = option.getPath();
 		File temp = new File(mMidiFileName);
 		friendlyFileName = temp.getName();
-//		setLocale2("nt");
+//		setLocale2("fg");// to display note value, you have to set local to 'fg'
 		setTheme(ThemeUtil.currentTheme);
 		boolean isChecked = ThemeUtil.isNightMode;
 		
@@ -332,16 +334,16 @@ public class MainActivity extends Activity implements MidiEventListener,
 //		conf.locale = new Locale(language_code.toLowerCase());
 //		res.updateConfiguration(conf, dm);
 //	}
-//
-//	public void setLocale2(String languageToLoad) {
-//		// String languageToLoad = "fa"; // your language
-//		Locale locale = new Locale(languageToLoad);
-//		Locale.setDefault(locale);
-//		Configuration config = new Configuration();
-//		config.locale = locale;
-//		getBaseContext().getResources().updateConfiguration(config,
-//				getBaseContext().getResources().getDisplayMetrics());
-//	}
+
+	public void setLocale2(String languageToLoad) {
+		// String languageToLoad = "fa"; // your language
+		Locale locale = new Locale(languageToLoad);
+		Locale.setDefault(locale);
+		Configuration config = new Configuration();
+		config.locale = locale;
+		getBaseContext().getResources().updateConfiguration(config,
+				getBaseContext().getResources().getDisplayMetrics());
+	}
 
 	public void onPrepared(MediaPlayer player) {
 		if (mProgressDialog != null)
