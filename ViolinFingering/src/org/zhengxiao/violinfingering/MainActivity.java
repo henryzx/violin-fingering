@@ -3,7 +3,6 @@ package org.zhengxiao.violinfingering;
 import java.io.File;
 import java.io.FileDescriptor;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
 import java.util.Locale;
@@ -18,6 +17,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.content.res.Resources.Theme;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -106,9 +106,18 @@ public class MainActivity extends Activity implements MidiEventListener,
 		isAsset = option.isAsset();
 		mMidiFileName = option.getPath();
 		setLocale2("nt");
+		setTheme(ThemeUtil.currentTheme);
+		boolean isChecked = false;
+		Object night = getIntent().getExtras().get(ThemeUtil.INTENT_EXTRA_NIGHTMODE);
+		if(night !=null){
+			isChecked = (Boolean)night;
+		}
+		
+		// init views
 		setContentView(R.layout.activity_main);
 
 		mTextView = (TextView) findViewById(R.id.textView_log);
+		mTextView.setText((isChecked?"夜间主题":"白天主题")+":欢迎");
 		mButtonPlay = (Button) findViewById(R.id.button_play);
 		// mButtonPlay.setClickable(false);
 		mButtonPlay.setOnClickListener(new View.OnClickListener() {
@@ -146,11 +155,7 @@ public class MainActivity extends Activity implements MidiEventListener,
 				}
 			}
 		});
-		boolean isChecked = false;
-		Object night = getIntent().getExtras().get(ThemeUtil.INTENT_EXTRA_NIGHTMODE);
-		if(night !=null){
-			isChecked = (Boolean)night;
-		}
+		
 		ToggleButton bu = (ToggleButton) findViewById(R.id.toggleButton_night);
 		bu.setChecked(isChecked);
 		bu.setOnCheckedChangeListener(new OnCheckedChangeListener() {
