@@ -2,16 +2,10 @@ package org.zhengxiao.violinfingering.util;
 
 import org.zhengxiao.violinfingering.Configs;
 
-import android.R;
-
 import com.leff.midi.MidiFile;
 
 /**
-<<<<<<< HEAD
  * NOTE: æŒ‡æ³•æé«˜ä¸€ä¸ªå…«åº¦
-=======
- * NOTE: Ö¸·¨Ìá¸ßÒ»¸ö°Ë¶È
->>>>>>> branch 'master' of https://github.com/henryzx/violinfingering.git
  * @author Zheng
  *
  */

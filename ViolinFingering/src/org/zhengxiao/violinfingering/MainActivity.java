@@ -17,7 +17,6 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.content.res.Resources.Theme;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -52,6 +51,7 @@ public class MainActivity extends Activity implements MidiEventListener,
 	private static final String CACHEPATH_PLAYBACK_MID = "/playback.mid";
 	MidiProcessor mProcessor;
 	String mMidiFileName = "midi/practice.mid";// "midi/flourish.mid";
+	String friendlyFileName = "";
 	boolean isAsset = true;
 	Map<Long, Integer> mFingerMap;
 	Handler mHandler = new MidiHandler(this);
@@ -64,6 +64,7 @@ public class MainActivity extends Activity implements MidiEventListener,
 			this.activity = new WeakReference<MainActivity>(mainActivity);
 		}
 
+		@SuppressWarnings("unused")
 		@Override
 		public void handleMessage(Message msg) {
 			final int value = msg.arg1;
@@ -72,7 +73,7 @@ public class MainActivity extends Activity implements MidiEventListener,
 //			activity.get().mTextView.setText("tick=" + tick + "value=" + value
 //					+ ",note=" + MidiMapper.Value2Name(value) + ",velocity="
 //					+ velocity);
-			activity.get().mTextView.setText(MidiMapper.Value2Name(value));
+			activity.get().mTextView.setText("("+activity.get().friendlyFileName+")音高："+MidiMapper.Value2Name(value));
 			activity.get().mFingerPadController.displayView(
 					activity.get().mFingerMap.get(tick), View.VISIBLE);
 			super.handleMessage(msg);
@@ -105,19 +106,17 @@ public class MainActivity extends Activity implements MidiEventListener,
 		
 		isAsset = option.isAsset();
 		mMidiFileName = option.getPath();
+		File temp = new File(mMidiFileName);
+		friendlyFileName = temp.getName();
 		setLocale2("nt");
 		setTheme(ThemeUtil.currentTheme);
-		boolean isChecked = false;
-		Object night = getIntent().getExtras().get(ThemeUtil.INTENT_EXTRA_NIGHTMODE);
-		if(night !=null){
-			isChecked = (Boolean)night;
-		}
+		boolean isChecked = ThemeUtil.isNightMode;
 		
 		// init views
 		setContentView(R.layout.activity_main);
 
 		mTextView = (TextView) findViewById(R.id.textView_log);
-		mTextView.setText((isChecked?"夜间主题":"白天主题")+":欢迎");
+		mTextView.setText((isChecked?"夜间主题":"白天主题")+":欢迎("+friendlyFileName+")");
 		mButtonPlay = (Button) findViewById(R.id.button_play);
 		// mButtonPlay.setClickable(false);
 		mButtonPlay.setOnClickListener(new View.OnClickListener() {
@@ -313,6 +312,7 @@ public class MainActivity extends Activity implements MidiEventListener,
 		mHandler.post(new Runnable() {
 			public void run() {
 				mFingerPadController.clearView();
+				mTextView.setText("("+friendlyFileName+":停止)");
 			}
 		});
 	}

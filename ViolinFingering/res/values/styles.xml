@@ -27,6 +27,8 @@
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
         <item name="android:textColor">#FFF</item>
         <item name="android:background">#A000</item>
+        <item name="android:ellipsize">start</item>
+        <item name="android:singleLine">true</item>
     </style>
     
     <style name="TextMainStyle_night" parent="TextMainStyle">

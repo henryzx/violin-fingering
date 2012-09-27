@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import org.zhengxiao.violinfingering.R;
 
 import android.app.Activity;
 import android.view.View;
@@ -17,6 +16,7 @@ import android.view.ViewGroup;
  *
  */
 public class FingerPadController {
+	@SuppressWarnings("unused")
 	private Activity mActivity;
 	Map<Integer, View> mFingerViews;
 	List<View> mVisibleView = new LinkedList<View>();
@@ -58,8 +58,10 @@ public class FingerPadController {
 	 */
 	public boolean displayView(int tag, int visibility) {
 		View v = mFingerViews.get(tag);
-		if (v == null)
+		if (v == null){
+			clearView();
 			return false;
+		}
 		if (v.getVisibility() == visibility)
 			return false;
 		v.setVisibility(visibility);
