@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fingerpadContainer"
+    android:layout_width="242dp"
+    android:layout_height="384dp" >
+
+    <ImageView
+        android:id="@+id/imageView_fingerpad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fingerpad" />
+
+    <TextView
+        android:id="@+id/A0"
+        style="@style/finger"
+        android:layout_x="32dp"
+        android:layout_y="60dp"
+        android:tag="45"
+        android:text="@string/a0" />
+
+    <TextView
+        android:id="@+id/G0s"
+        style="@style/finger"
+        android:layout_x="34dp"
+        android:layout_y="6dp"
+        android:tag="44"
+        android:text="@string/g0s" />
+
+    <TextView
+        android:id="@+id/B0"
+        style="@style/finger"
+        android:layout_x="24dp"
+        android:layout_y="172dp"
+        android:tag="47"
+        android:text="@string/b0" />
+
+    <TextView
+        android:id="@+id/A0s"
+        style="@style/finger"
+        android:layout_x="29dp"
+        android:layout_y="116dp"
+        android:tag="46"
+        android:text="@string/a0s" />
+
+    <TextView
+        android:id="@+id/C1"
+        style="@style/finger"
+        android:layout_x="23dp"
+        android:layout_y="226dp"
+        android:tag="48"
+        android:text="@string/c1" />
+
+    <TextView
+        android:id="@+id/C1s"
+        style="@style/finger"
+        android:layout_x="21dp"
+        android:layout_y="279dp"
+        android:tag="49"
+        android:text="@string/c1s" />
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/D1"
+    style="@style/finger"
+    android:layout_x="19dp"
+    android:layout_y="332dp"
+    android:tag="50"
+    android:text="@string/d1" />
+
+<TextView
+    android:id="@+id/D1s"
+    style="@style/finger"
+    android:layout_x="80dp"
+    android:layout_y="8dp"
+    android:tag="51"
+    android:text="@string/d1s" />
+
+<TextView
+    android:id="@+id/E1"
+    style="@style/finger"
+    android:layout_x="80dp"
+    android:layout_y="61dp"
+    android:tag="52"
+    android:text="@string/e1" />
+
+<TextView
+    android:id="@+id/F1"
+    style="@style/finger"
+    android:layout_x="80dp"
+    android:layout_y="118dp"
+    android:tag="53"
+    android:text="@string/f1" />
+
+<TextView
+    android:id="@+id/F1s"
+    style="@style/finger"
+    android:layout_x="78dp"
+    android:layout_y="171dp"
+    android:tag="54"
+    android:text="@string/f1s" />
+
+<TextView
+    android:id="@+id/G1"
+    style="@style/finger"
+    android:layout_x="76dp"
+    android:layout_y="226dp"
+    android:tag="55"
+    android:text="@string/g1" />
+
+<TextView
+    android:id="@+id/G1s"
+    style="@style/finger"
+    android:layout_x="77dp"
+    android:layout_y="280dp"
+    android:tag="56"
+    android:text="@string/g1s" />
+
+<TextView
+    android:id="@+id/A1"
+    style="@style/finger"
+    android:layout_x="77dp"
+    android:layout_y="334dp"
+    android:tag="57"
+    android:text="@string/a1" />
+
+<TextView
+    android:id="@+id/A1s"
+    style="@style/finger"
+    android:layout_x="127dp"
+    android:layout_y="8dp"
+    android:tag="58"
+    android:text="@string/a1s" />
+
+<TextView
+    android:id="@+id/B1"
+    style="@style/finger"
+    android:layout_x="129dp"
+    android:layout_y="61dp"
+    android:tag="59"
+    android:text="@string/b1" />
+
+<TextView
+    android:id="@+id/C2"
+    style="@style/finger"
+    android:layout_x="130dp"
+    android:layout_y="116dp"
+    android:tag="60"
+    android:text="@string/c2" />
+
+<TextView
+    android:id="@+id/C2s"
+    style="@style/finger"
+    android:layout_x="131dp"
+    android:layout_y="172dp"
+    android:tag="61"
+    android:text="@string/c2s" />
+
+<TextView
+    android:id="@+id/D2"
+    style="@style/finger"
+    android:layout_x="133dp"
+    android:layout_y="225dp"
+    android:tag="62"
+    android:text="@string/d2" />
+
+<TextView
+    android:id="@+id/D2s"
+    style="@style/finger"
+    android:layout_x="133dp"
+    android:layout_y="280dp"
+    android:tag="63"
+    android:text="@string/d2" />
+
+<TextView
+    android:id="@+id/E2"
+    style="@style/finger"
+    android:layout_x="134dp"
+    android:layout_y="334dp"
+    android:tag="64"
+    android:text="@string/e2" />
+
+<TextView
+    android:id="@+id/B2"
+    style="@style/finger"
+    android:layout_x="194dp"
+    android:layout_y="334dp"
+    android:tag="71"
+    android:text="@string/b2" />
+
+<TextView
+    android:id="@+id/A2s"
+    style="@style/finger"
+    android:layout_x="190dp"
+    android:layout_y="280dp"
+    android:tag="70"
+    android:text="@string/a2s" />
+
+<TextView
+    android:id="@+id/A2"
+    style="@style/finger"
+    android:layout_x="184dp"
+    android:layout_y="224dp"
+    android:tag="69"
+    android:text="@string/a2" />
+
+<TextView
+    android:id="@+id/G2s"
+    style="@style/finger"
+    android:layout_x="181dp"
+    android:layout_y="172dp"
+    android:tag="68"
+    android:text="@string/g2s" />
+
+<TextView
+    android:id="@+id/G2"
+    style="@style/finger"
+    android:layout_x="179dp"
+    android:layout_y="116dp"
+    android:tag="67"
+    android:text="@string/g2" />
+
+<TextView
+    android:id="@+id/F2s"
+    style="@style/finger"
+    android:layout_x="175dp"
+    android:layout_y="61dp"
+    android:tag="66"
+    android:text="@string/f2s" />
+
+<TextView
+    android:id="@+id/F2"
+    style="@style/finger"
+    android:layout_x="172dp"
+    android:layout_y="7dp"
+    android:tag="65"
+    android:text="@string/f2" />
+
+<TextView
+    android:id="@+id/LineG"
+    style="@style/finger"
+    android:layout_width="wrap_content"
+    android:layout_height="373dp"
+    android:layout_x="45dp"
+    android:layout_y="1dp"
+    android:background="#AFFF"
+    android:tag="43"
+    android:text="4" />
+
+<TextView
+    android:id="@+id/LineD"
+    style="@style/finger"
+    android:layout_width="wrap_content"
+    android:layout_height="373dp"
+    android:layout_x="96dp"
+    android:layout_y="1dp"
+    android:background="#AFFF"
+    android:tag="-50"
+    android:text="3" />
+
+<TextView
+    android:id="@+id/LineA"
+    style="@style/finger"
+    android:layout_width="wrap_content"
+    android:layout_height="373dp"
+    android:layout_x="146dp"
+    android:layout_y="2dp"
+    android:background="#AFFF"
+    android:tag="-57"
+    android:text="2" />
+
+<TextView
+    android:id="@+id/LineE"
+    style="@style/finger"
+    android:layout_width="wrap_content"
+    android:layout_height="373dp"
+    android:layout_x="190dp"
+    android:layout_y="2dp"
+    android:background="#AFFF"
+    android:tag="-64"
+    android:text="1" />
+
+</AbsoluteLayout>

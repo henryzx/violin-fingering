@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/fingerpad"
+        android:layout_width="242dp"
+        android:layout_height="384dp"
+        android:layout_centerHorizontal="true"
+        layout="@layout/fingerpad" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/button_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_play" />
+
+        <Button
+            android:id="@+id/button_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_stop" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton_night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="白天主题"
+            android:textOn="夜间主题" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_log"
+        style="@style/TextMainStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="欢迎" />
+
+</RelativeLayout>

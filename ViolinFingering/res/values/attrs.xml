@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- View Styles -->
+    <attr name="fingerStyleRef" format="reference" />
+    <attr name="textMainStyleRef" format="reference" />
+    <attr name="backGroundStyleRef" format="reference" />
+	
+</resources>

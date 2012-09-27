@@ -1,0 +1,46 @@
+<resources>
+
+    <string name="app_name">ViolinFingering</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="btn_play">播放</string>
+    <string name="btn_stop">停止</string>
+    <string name="loading_title">加载中</string>
+    <string name="loading_message">读取midi文件</string>
+    <string name="title_activity_file_list">FileList</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="version">1.0</string>
+
+    <string name="g0s">G#</string>
+    <string name="a0">A</string>
+    <string name="a0s">A#</string>
+    <string name="b0">B</string>
+    <string name="c1">C</string>
+    <string name="c1s">C#</string>
+    <string name="d1">D</string>
+    
+    <string name="d1s">D#</string>
+    <string name="e1">E</string>
+    <string name="f1">F</string>
+    <string name="f1s">F#</string>
+    <string name="g1">G</string>
+    <string name="g1s">G#</string>
+    <string name="a1">A</string>
+    
+    <string name="a1s">A#</string>
+    <string name="b1">B</string>
+    <string name="c2">C</string>
+    <string name="c2s">C#</string>
+    <string name="d2">D</string>
+    <string name="d2s">D#</string>
+    <string name="e2">E</string>
+    
+    <string name="f2">F</string>
+    <string name="f2s">F#</string>
+    <string name="g2">G</string>
+    <string name="g2s">G#</string>
+    <string name="a2">A</string>
+    <string name="a2s">A#</string>
+    <string name="b2">B</string>
+</resources>
